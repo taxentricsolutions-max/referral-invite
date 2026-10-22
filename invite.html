@@ -47,10 +47,12 @@
     }
 
     .logo {
-      height: 140px;
+      height: 160px;
       width: auto;
-      display: block;
-      margin: 0 auto 20px;
+      margin-bottom: 6px;
+      position: absolute;
+      top: 30px;
+      left: 30px;
     }
 
     @keyframes gradientMove {
@@ -252,16 +254,15 @@
 
   <header class="hero">
     <div class="container">
-      <img src="logo.png" alt="Taxentric Logo" class="logo">
-      <h1 class="gradient-text" id="welcome">Welcome to Taxentric Solutions! A friend invited you.</h1>
-      <p>Your friend thought you'd like working with us. We're 100% online, you see your price before we start, and you'll hear back from a real person when you have questions.</p>
-      <p>Not ready to get started yet? That's fine. You can still join our referral program and earn up to $250 for every friend you refer.</p>
+      <h1 class="gradient-text" id="welcome">Welcome! A friend invited you to Taxentric Solutions</h1>
+      <div class="discount">See your price <strong>before we start</strong>. No surprise bills.</div>
+      <p>Thanks to your friend's referral, you'll get expert tax preparation with transparent, upfront pricing.</p>
+      <p>Not ready to file yet? That's totally fine. You can still join the referral program and earn up to $250 for every friend you refer.</p>
 
       <div class="cta-buttons">
-        <a href="https://portal.taxentric.com/en-us/signup" class="btn btn-primary">Get Started</a>
-        <a href="https://referrals.taxentric.com" class="btn btn-secondary">Join the Referral Program</a>
+        <a href="https://portal.taxentric.com/en-us/signup" class="btn btn-primary">Sign Up for Tax Services</a>
+        <a href="https://referrals.taxentric.com" class="btn btn-secondary">Just Join the Referral Program (Earn Cash)</a>
       </div>
-      <p style="margin-top:1.25rem;font-size:.95rem;">Want to see your price first? <a href="https://taxentric.com/fee-estimator">Try our fee estimator</a>.</p>
     </div>
   </header>
 
@@ -363,10 +364,10 @@
   <script>
     // Personalization from URL params
     const urlParams = new URLSearchParams(window.location.search);
-    const refName = urlParams.get('refName') || 'A friend';
+    const refName = urlParams.get('refName') || 'a friend';
 
     document.getElementById('welcome').textContent = 
-      `Welcome to Taxentric Solutions! ${refName} invited you.`;
+      `Welcome! ${refName} invited you to Taxentric Solutions`;
   </script>
 </body>
 </html>
